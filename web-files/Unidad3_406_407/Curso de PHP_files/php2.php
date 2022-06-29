@@ -10,9 +10,9 @@
         //Y ahora escribimos en pantalla su resultado 
         echo COLOR_ROJO; 
         //Hay que destacar que el signo de $ no hace falta ponerlo 
-        //Existe otra función que nos permite averiguar el valor de la 
-        constante 
-        echo constant (" C0L0R_R0JO") ; 
+        //Existe otra funcion que nos permite averiguar el valor de la 
+        //constante 
+        echo constant ("COLOR_ROJO"); 
     ?>
 </body>
 </html>
