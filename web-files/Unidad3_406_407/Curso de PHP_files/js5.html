@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>funcion Js</title>
+</head>
+<body>
+   <h1>Ejemplo de funciones en JS<br></h1>
+ <SCRIPT>
+       function carga_imagen(fichero_imagen)
+       {
+          document.images.imagen.src = fichero_imagen;
+       }
+   </SCRIPT>
+
+   <IMG NAME="imagen" SRC="imagenes/casa01.gif">
+   <FORM NAME="ejemplo6">
+      <INPUT TYPE="button" NAME="boton" VALUE="Casa 1"
+         ONCLICK="carga_imagen('imagenes/casa01.gif');">
+      <INPUT TYPE="button" NAME="boton" VALUE="Casa 2"
+         ONCLICK="carga_imagen('imagenes/casa02.gif');">
+      <INPUT TYPE="button" NAME="boton" VALUE="Casa 3"
+         ONCLICK="carga_imagen('imagenes/casa03.gif');">
+   </FORM>
+
+</body>
+</html>

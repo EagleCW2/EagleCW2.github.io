@@ -1,0 +1,22 @@
+<SCRIPT>
+   <!--
+      function suma (p)
+      {
+          if (document.forms.ejemplo4.precio.value)
+             pant = parseInt(document.forms.ejemplo4.precio.value);
+          else
+             pant=0;
+          if(parseInt(p)==1)
+             document.forms.ejemplo4.precio.value = pant + 10;
+          else
+             document.forms.ejemplo4.precio.value = pant - 10;
+      }
+   // -->
+   </SCRIPT>
+
+   <FORM NAME="ejemplo4">
+      <P>Valor actual:
+      <INPUT TYPE="text" NAME="precio" VALUE="0" SIZE=10>
+      <INPUT TYPE="button" NAME="aumentar" VALUE="Aumentar" ONCLICK="suma(1)">
+      <INPUT TYPE="button" NAME="disminuir" VALUE="Disminuir" ONCLICK="suma(2)"></P>
+   </FORM>

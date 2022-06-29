@@ -1,0 +1,371 @@
+
+<!-- saved from url=(0049)http://www.lsi.us.es/cursos/cursoweb/cap0903.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Capítulo 9: Páginas web dinámicas (página 3)</title>
+<link rel="stylesheet" type="text/css" href="./estilo.css">
+</head>
+
+<body bgcolor="WHITE">
+
+
+<h1>Scripts dinámicos</h1>
+
+<a name="dinamico"></a>
+<p>Se puede dar un carácter dinámico a las páginas asociando <em>scripts</em> a elementos
+de HTML y haciendo que se ejecuten cuando se produzca un evento asociado a ellos.</p>
+
+<p>Un ejemplo de evento puede ser pulsar el ratón sobre el elemento (evento <em>OnClick</em>)
+o sobrevolar el elemento con el ratón (evento <em>OnMouseOver</em>).</p>
+
+<h2><img src="./bolaazul.gif">Eventos</h2>
+<p>Los principales eventos reconocidos por los navegadores son:</p>
+
+<ul>
+   <li><em>OnAbort</em>: se activa cuando el usuario aborta la carga de una imagen.
+   </li><li><em>OnBlur</em>: se activa cuando el elemento de entrada del formulario al
+       que está asociado pierde el foco, es decir, cuando el usuario selecciona otro
+       elemento de entrada o un texto situado fuera del elemento.
+   </li><li><em>OnChange</em>: se activa cuando un elemento de entrada de un formulario
+       pierde el foco y ha sido modificado.
+   </li><li><em>OnClick</em>: se activa cuando se selecciona un botón de un formulario
+       o un enlace de hipertexto.
+   </li><li><em>OnError</em>: se activa cuando se produce un error en un programa
+       JavaScript.
+   </li><li><em>OnFocus</em>: se activa cuando se selecciona un elemento de entrada
+       de un formulario pulsando en él con el botón del ratón o colocándose en
+       él con la tecla de tabulación.
+   </li><li><em>OnLoad</em>: se activa cuando se carga un documento HTML o una imagen.
+   </li><li><em>OnMouseDown</em>: se activa cuando se pulsa el botón del ratón dentro de un
+       elemento. Se activa antes que el evento <em>OnClick</em>.
+   </li><li><em>OnMouseMove</em>: se activa cuando el cursor del ratón se mueve dentro de un
+       elemento.
+   </li><li><em>OnMouseOut</em>: se activa cuando el cursor del ratón abandona un elemento.
+   </li><li><em>OnMouseOver</em>: se activa cuando el cursor del ratón pasa por encima de un
+       elemento.
+   </li><li><em>OnMouseUp</em>: se activa cuando se deja de pulsar el botón del ratón dentro de un
+       elemento. Se activa después que el evento <em>OnClick</em>.
+   </li><li><em>OnReset</em>: se activa cuando se pulsa el botón de borrar de
+       un formulario.
+   </li><li><em>OnSelect</em>: se activa cuando se selecciona un texto dentro de un
+       elemento TEXTAREA o INPUT (TYPE="text" o "password").
+   </li><li><em>OnSubmit</em>: se activa cuando se envía un formulario.
+   </li><li><em>OnUnload</em>: se activa cuando se descarga el documento actual, es decir,
+       cuando el usuario accede a otro documento.
+</li></ul>
+
+<p>La tabla siguiente indica los elementos de HTML que poseen eventos asociados y cuáles
+son aplicables a cada uno de ellos. Además, los eventos de ratón <em>OnMouseOver</em>, 
+<em>OnMouseOut</em>, <em>OnMouseDown</em>, <em>OnMouseUp</em> y <em>OnMouseMove</em>
+son aplicables a todos los elementos de la página.</p>
+
+<table>
+   <tbody><tr bgcolor="#0863CE" align="LEFT"><th><font color="WHITE">Elemento</font></th>
+       <th colspan="4"><font color="WHITE">Eventos asociados</font></th></tr>
+   <tr><td bgcolor="LIGHTBLUE">A</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td bgcolor="DDDDFF">OnMouseOver</td>
+       <td bgcolor="DDDDFF">OnMouseOut</td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">AREA</td>
+       <td bgcolor="DDDDFF">OnMouseOver</td>
+       <td bgcolor="DDDDFF">OnMouseOut</td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">IMG</td>
+       <td bgcolor="DDDDFF">OnAbort</td>
+       <td bgcolor="DDDDFF">OnLoad</td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="button"</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="checkbox"</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="radio"</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="submit"</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="reset"</td>
+       <td bgcolor="DDDDFF">OnClick</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">BODY</td>
+       <td bgcolor="DDDDFF">OnBlur</td>
+       <td bgcolor="DDDDFF">OnFocus</td>
+       <td bgcolor="DDDDFF">OnLoad</td>
+       <td bgcolor="DDDDFF">OnUnload</td></tr>
+   <tr><td bgcolor="LIGHTBLUE">FRAMESET</td>
+       <td bgcolor="DDDDFF">OnBlur</td>
+       <td bgcolor="DDDDFF">OnFocus</td>
+       <td bgcolor="DDDDFF">OnLoad</td>
+       <td bgcolor="DDDDFF">OnUnload</td></tr>
+   <tr><td bgcolor="LIGHTBLUE">SELECT</td>
+       <td bgcolor="DDDDFF">OnChange</td>
+       <td></td>
+       <td></td>
+       <td></td></tr>
+   <tr><td bgcolor="LIGHTBLUE">TEXTAREA</td>
+       <td bgcolor="DDDDFF">OnBlur</td>
+       <td bgcolor="DDDDFF">OnFocus</td>
+       <td bgcolor="DDDDFF">OnChange</td>
+       <td bgcolor="DDDDFF">OnSelect</td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="text"</td>
+       <td bgcolor="DDDDFF">OnBlur</td>
+       <td bgcolor="DDDDFF">OnFocus</td>
+       <td bgcolor="DDDDFF">OnChange</td>
+       <td bgcolor="DDDDFF">OnSelect</td></tr>
+   <tr><td bgcolor="LIGHTBLUE">INPUT TYPE="password"</td>
+       <td bgcolor="DDDDFF">OnBlur</td>
+       <td bgcolor="DDDDFF">OnFocus</td>
+       <td bgcolor="DDDDFF">OnChange</td>
+       <td bgcolor="DDDDFF">OnSelect</td></tr>
+   <tr><td bgcolor="LIGHTBLUE">FORM</td>
+       <td bgcolor="DDDDFF">OnSubmit</td>
+       <td bgcolor="DDDDFF">OnReset</td>
+       <td></td>
+       <td></td></tr>
+</tbody></table>
+
+
+<h2><img src="./bolaazul.gif">Activación de los eventos</h2>
+<p>Para asociar un evento a un elemento HTML se añade al elemento un atributo con el
+nombre del evento. Dicho atributo tendrá como valor la llamada al <em>script</em> que se
+desea ejecutar cuando se produzca el evento, y que habrá sido definido con anterioridad
+mediante el elemento <strong>SCRIPT</strong> (normalmente dentro del elemento HEAD).</p>
+
+<p>Como ejemplo se muestra el uso del evento <em>OnLoad</em> para ofrecer un mensaje
+de bienvenida a los visitantes de la página. Se utiliza la función predefinida <em>alert</em>,
+que muestra una ventana con un mensaje de aviso.</p>
+ 
+<pre>   &lt;BODY ONLOAD="alert('Bienvenido a mi página');"&gt;
+</pre>
+
+<h2><img src="./bolaazul.gif">Ejemplos</h2>
+
+<h3><img src="./bolanara.gif">Ejemplo 1: evento <em>OnClick</em></h3>
+<p>Este evento se activa cuando se hace click con el ratón sobre un botón de un formulario o
+un enlace de hipertexto.</p>
+
+<form>
+   <input type="button" name="boton" value="botón" onclick="alert(&#39;¡Botón pulsado!&#39;);">
+</form>
+
+<pre>   &lt;INPUT TYPE="button" NAME="boton" VALUE="botón"
+    ONCLICK="alert('¡Botón pulsado!');"&gt;
+</pre>
+
+
+<h3><img src="./bolanara.gif">Ejemplo 2: evento <em>OnMouseOver</em></h3>
+<p>Este evento se activa cuando el ratón pasa por encima de un enlace de hipertexto.</p>
+
+   <a onmouseover="alert(&#39;Has pasado por encima del enlace&#39;);" href="http://www.lsi.us.es/cursos/cursoweb/docpru.html">Enlace sensible</a>
+
+<pre>   &lt;A ONMOUSEOVER="alert('Has pasado por encima del enlace');"
+   HREF="docpru.html"&gt;Enlace sensible&lt;/A&gt;
+</pre>
+
+
+<h3><img src="./bolanara.gif">Ejemplo 3: evento <em>OnSubmit</em></h3>
+<p>Este evento es muy utilizado para validar los datos introducidos desde un formulario.</p>
+
+<script language="JavaScript">
+<!--
+   function compruebaFormulario ()
+   {
+      if (document.forms.ejemplo3.dni.value == "")
+      {
+         alert ('Debe introducir el DNI');
+         return (false);
+      }
+      else
+         return (true);
+   }
+//-->
+</script>
+<form name="ejemplo3" onsubmit="return(compruebaFormulario())">
+   DNI: <input type="text" name="dni" size="20">
+   <input type="submit" value="Enviar formulario">
+</form>
+
+<pre>   &lt;SCRIPT LANGUAGE="JavaScript"&gt;
+   &lt;!--
+      function compruebaFormulario ()
+      {
+         if (document.forms.ejemplo3.dni.value == "")
+         {
+            alert ('Debe introducir el DNI');
+            return (false);
+         }
+         else
+            return (true);
+      }
+   //--&gt;
+   &lt;/SCRIPT&gt;
+
+   &lt;FORM NAME="ejemplo3" ONSUBMIT="return(compruebaFormulario())"&gt;
+      DNI: &lt;INPUT TYPE="text" NAME="dni" SIZE="20"&gt;
+      &lt;INPUT TYPE="submit" VALUE="Enviar formulario"&gt;
+   &lt;/FORM&gt;
+</pre>
+
+
+<h3><img src="./bolanara.gif">Ejemplo 4: botones que actualizan un campo de texto</h3>
+<p>El siguiente <em>script</em> permite modificar el valor que aparece en un campo de texto de
+un formulario mediante la pulsación de unos botones. Existen dos botones con los
+rótulos "aumentar" y "disminuir" respectivamente. El primero de ellos aumenta en 10 unidades
+el número que aparece en la ventana de texto, mientras que el segundo disminuye en 10 unidades
+dicho valor.</p>
+
+<script>
+<!--
+   function suma (p)
+   {
+       if (document.forms.ejemplo4.precio.value)
+          pant = parseInt(document.forms.ejemplo4.precio.value);
+       else
+          pant=0;
+       if(parseInt(p)==1)
+          document.forms.ejemplo4.precio.value = pant + 10;
+       else
+          document.forms.ejemplo4.precio.value = pant - 10;
+   }
+// -->
+</script>
+
+<form name="ejemplo4">
+   <p>Valor actual:
+   <input type="text" name="precio" value="0" size="10">
+   <input type="button" name="aumentar" value="Aumentar" onclick="suma(1)">
+   <input type="button" name="disminuir" value="Disminuir" onclick="suma(2)"></p>
+</form>
+
+<pre>   &lt;SCRIPT&gt;
+   &lt;!--
+      function suma (p)
+      {
+          if (document.forms.ejemplo4.precio.value)
+             pant = parseInt(document.forms.ejemplo4.precio.value);
+          else
+             pant=0;
+          if(parseInt(p)==1)
+             document.forms.ejemplo4.precio.value = pant + 10;
+          else
+             document.forms.ejemplo4.precio.value = pant - 10;
+      }
+   // --&gt;
+   &lt;/SCRIPT&gt;
+
+   &lt;FORM NAME="ejemplo4"&gt;
+      &lt;P&gt;Valor actual:
+      &lt;INPUT TYPE="text" NAME="precio" VALUE="0" SIZE=10&gt;
+      &lt;INPUT TYPE="button" NAME="aumentar" VALUE="Aumentar" ONCLICK="suma(1)"&gt;
+      &lt;INPUT TYPE="button" NAME="disminuir" VALUE="Disminuir" ONCLICK="suma(2)"&gt;&lt;/P&gt;
+   &lt;/FORM&gt;
+</pre>
+
+<h3><img src="./bolanara.gif">Ejemplo 5: botones de radio que actualizan
+un campo de texto</h3>
+<p>Este ejemplo es similar al anterior, solo que en esta ocasión el campo de texto cambia de
+valor según se seleccione uno u otro botón de radio.</p>
+
+<script>
+<!--
+   function respuesta (res)
+   {
+      document.forms.ejemplo5.resultado.value=res;
+   }
+// -->
+</script>
+
+<form name="ejemplo5">
+   <p>Pregunta<br>
+   </p><blockquote>
+   <input type="radio" name="pregunta" onclick="respuesta(&#39;incorrecto&#39;)">Respuesta 1<br>
+   <input type="radio" name="pregunta" onclick="respuesta(&#39;incorrecto&#39;)">Respuesta 2<br>
+   <input type="radio" name="pregunta" onclick="respuesta(&#39;correcto&#39;)">Respuesta 3<br>
+   <input type="radio" name="pregunta" onclick="respuesta(&#39;incorrecto&#39;)">Respuesta 4<br>
+   <input type="radio" name="pregunta" onclick="respuesta(&#39;incorrecto&#39;)">Respuesta 5<br>
+   Resultado: <input type="text" name="resultado" size="10"><p></p>
+   </blockquote>
+</form>
+
+<pre>   &lt;SCRIPT&gt;
+   &lt;!--
+      function respuesta (res)
+      {
+         document.forms.ejemplo5.resultado.value=res;
+      }
+   // --&gt;
+   &lt;/SCRIPT&gt;
+
+   &lt;FORM NAME="ejemplo5"&gt;
+      &lt;P&gt;Pregunta&lt;BR&gt;
+      &lt;BLOCKQUOTE&gt;
+      &lt;INPUT TYPE="radio" NAME="pregunta" ONCLICK="respuesta('incorrecto')"&gt;Respuesta 1&lt;BR&gt;
+      &lt;INPUT TYPE="radio" NAME="pregunta" ONCLICK="respuesta('incorrecto')"&gt;Respuesta 2&lt;BR&gt;
+      &lt;INPUT TYPE="radio" NAME="pregunta" ONCLICK="respuesta('correcto')"&gt;Respuesta 3&lt;BR&gt;
+      &lt;INPUT TYPE="radio" NAME="pregunta" ONCLICK="respuesta('incorrecto')"&gt;Respuesta 4&lt;BR&gt;
+      &lt;INPUT TYPE="radio" NAME="pregunta" ONCLICK="respuesta('incorrecto')"&gt;Respuesta 5&lt;BR&gt;
+      Resultado: &lt;INPUT TYPE="text" NAME="resultado" SIZE=10&gt;&lt;/P&gt;
+      &lt;/BLOCKQUOTE&gt;
+   &lt;/FORM&gt;
+</pre>
+
+
+<h3><img src="./bolanara.gif">Ejemplo 6: actualización de imágenes</h3>
+<p>Las imágenes de una página pueden modificarse de forma dinámica.
+El siguiente ejemplo muestra un <em>script</em> que permite cambiar la imagen que aparece en
+la página simplemente con pulsar un botón.</p>
+
+<script>
+<!--
+    function carga_imagen(fichero_imagen)
+    {
+       document.images.imagen.src = fichero_imagen;
+    }
+//-->
+</script>
+
+<img name="imagen" src="./casa03.gif">
+<form name="ejemplo6">
+   <input type="button" name="boton" value="Casa 1" onclick="carga_imagen(&#39;imagenes/casa01.gif&#39;);">
+   <input type="button" name="boton" value="Casa 2" onclick="carga_imagen(&#39;imagenes/casa02.gif&#39;);">
+   <input type="button" name="boton" value="Casa 3" onclick="carga_imagen(&#39;imagenes/casa03.gif&#39;);">
+</form>
+
+<pre>   &lt;SCRIPT&gt;
+   &lt;!--
+       function carga_imagen(fichero_imagen)
+       {
+          document.images.imagen.src = fichero_imagen;
+       }
+   //--&gt;
+   &lt;/SCRIPT&gt;
+
+   &lt;IMG NAME="imagen" SRC="imagenes/casa01.gif"&gt;
+   &lt;FORM NAME="ejemplo6"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 1"
+         ONCLICK="carga_imagen('imagenes/casa01.gif');"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 2"
+         ONCLICK="carga_imagen('imagenes/casa02.gif');"&gt;
+      &lt;INPUT TYPE="button" NAME="boton" VALUE="Casa 3"
+         ONCLICK="carga_imagen('imagenes/casa03.gif');"&gt;
+   &lt;/FORM&gt;
+</pre>
+
+
+
+
+</body></html>

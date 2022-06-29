@@ -1,0 +1,35 @@
+/*BODY {font-family: verdana,arial; font-size: 10pt}
+H1 {font-family: verdana,arial; font-size: 16pt; font-weight: bold; color: #0066CC}
+H2 {font-family: verdana,arial; font-size: 12pt; font-weight: bold; font-style: italic;
+    color: black}
+H3 {font-family: verdana,arial; font-size: 10pt; font-weight: bold; color: black}
+TH {font-family: verdana,arial; font-size: 10pt; font-weight: bold; color: white;
+    background: #000000; text-align: left}
+TD {font-family: verdana,arial; font-size: 10pt}*/
+
+/* General */
+   BODY {font-family: verdana, arial, sans-serif;}
+   
+/* Cabecera */
+   P.titulo {font-size: 1.1em; font-weight: bold; margin: 0 0 0.5em 0; color: #0066CC;}
+   P.autor {font-size: 0.8em; font-weight: bold; margin: 0 0 0.5em 0; }
+   P.institucion {font-size: 0.8em; font-style: italic; margin: 0 0 0.2em 0;}
+   IMG.logo {float: left; margin: 0 1em 0.5em 1em;}
+
+/* Cajas DIV */
+   #contenido {clear: left; margin-top: 2em;}
+   #tabladecontenidos {border: 1px dotted blue; background-color: #E6EEF6;
+      padding-left: 0.5em; margin-right: 20%; margin-left: 20%;}
+
+/* Contenido */
+   H1 {text-align: "center";font-size: 2em; color: white; background:#0863CE; padding: 0.1em 0.2em;}
+   H2 {font-family: verdana,arial; background:#0863CE; font-size: 12pt; font-weight: bold; font-style: italic;
+    color: white}
+	H3 {font-family: verdana,arial; font-size: 10pt; font-weight: bold; color: black}
+	TH {font-family: verdana,arial; font-size: 10pt; font-weight: bold; color: rgb(248, 8, 8);
+    background: #0066CC; text-align: left}
+	TD {font-family: verdana,arial; font-size: 10pt}
+
+   UL {list-style-image: url(rombo.gif);}
+   ADDRESS {font-size: 0.8em; font-style: italic;}
+   .nota {font-size: 0.8em; font-style: italic;}

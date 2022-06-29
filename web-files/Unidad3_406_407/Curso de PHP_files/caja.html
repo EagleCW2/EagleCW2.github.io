@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />	
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 8 - Funciones básicas</title>
+<h4>Cambiar el estilo de las páginas web con Javascript</h4>
+<div id="test" class="marco3">
+El estilo de las páginas web se puede modificar de forma interactiva (sin tener que refrescar la página desde el servidor) usando el objeto Estilo.<br>
+Esto puede resultar muy práctico, un ejemplo son los <a target="_blank" href="https://norfipc.com/internet/navegadores-web-usar-agregar-bookmarklets.html" title="Página con infinidad de Bookmarklets para descargar gratis">Bookmarklets</a> usados para mejorar la accesibilidad de las paginas (tamaño del texto, color, eliminar publicidad, etc.)<br>
+<div class="padding:6px;margin:12px 0 12px 0;line-height:28px;">
+<a href="javascript:void(document.getElementById('test').style.color='blue')">Hacer el texto de color Azul</a>&nbsp;<br>
+<a href="javascript:void(document.getElementById('test').style.color='red')">Hacerlo Rojo</a>&nbsp;<br>
+<a href="javascript:void(document.getElementById('test').style.color='green')">Verde</a>&nbsp;<br>
+<a href="javascript:void(document.getElementById('test').style.fontWeight='bold')">El texto en negrita</a>&nbsp;<br>
+<a href="javascript:void(document.getElementById('test').style.backgroundColor='yellow')">El fondo amarillo</a>&nbsp;<br>
+<a href="javascript:void(document.getElementById('test').style.visibility='hidden')">Ocultar texto</a></div>
+</div>
+<button type="button" class="btn tw" onclick="document.getElementById('test').style.left=0;document.getElementById('test').style.color='black';document.getElementById('test').style.fontWeight='normal';document.getElementById('test').style.backgroundColor='white';document.getElementById('test').style.visibility='visible'; return false;">RESET</button>
+<br>
+<ins class="adsbygoogle"
+    style="display:inline-block;width:200px;height:90px"
+    data-ad-client="ca-pub-1427807059973185"
+    data-ad-slot="1839373434"></ins>
+<script type="text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+	$(document).ready(function() {
+		$("#boton2").click(function(event) {
+			$("#capa").load('caja.html');
+		});
+	});
+
+</script>
+</head>
+ 
+<body>
+</body>
+</html>
